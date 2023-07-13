@@ -1,0 +1,145 @@
+
+.service-container{
+    margin-bottom: 2rem;
+}
+
+.card{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.service-card{
+    position:relative;
+    background-color: white;
+    box-shadow: 2px 3px 5px rgba(0, 0,0, 0.5);
+    border-radius: 5px;
+    border:2px solid rgb(200, 200, 200);
+    padding:20px;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    cursor: pointer;
+    height: 100%;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 2px 3px 5px rgba(0, 0,0, 0.2);
+    border-radius: 5px;
+    padding:30px 20px;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    cursor: pointer;
+    background-image: linear-gradient(45, red, green);
+    background-color: var(--highlight-color);
+    transform: translateY(200px);
+    z-index: 1000;
+    transition: .3s ease-in;
+    height: 100%;
+}
+
+.card:hover .overlay{
+    transform: translateY(-10px);
+}
+
+
+
+.service-card .service-title{
+    color: var(--title-color)
+}
+
+.service-card .service-description{
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+.service-img{
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+}
+
+.service-img img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.service-grid-3x2{
+    display: grid;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.overlay .service-title{
+    color: white;
+    margin: 5px 0;
+    font-weight: 800;
+}
+
+.overlay .service-description{
+    color: greenyellow;
+    margin-top:10px;
+    color:var(--background-color);
+
+}
+
+.overlay .service-icon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+}
+
+.overlay .service-icon i{
+    font-size: 1.2rem;
+    margin:5px;
+    color:white;
+}
+@media(min-width:600px){
+    .service-grid-3x2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media(min-width:900px){
+    .card{
+        height: 200px;
+    }
+
+    .overlay{
+        height: 220px;
+    }
+
+    .service-card{
+        height: 200px;
+    }
+
+    .service-grid-3x2{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .overlay .service-icon{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .overlay{
+        padding-bottom: 20px;
+    }
+    /* .service-container{
+        margin-bottom: 40px;
+    } */
+}
+
+

@@ -1,0 +1,38 @@
+{
+  "name": "doubledot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "webpack --mode development --watch",
+    "start": "webpack serve --config webpack.config.js",
+    "tailwind-watch": "tailwindcss -i ./static/input.css -o ./static/css/output.css --watch",
+    "tailwind-build": "tailwindcss -i ./static/input.css -o ./static/css/output.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.2",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "babel-preset-env": "^1.7.0",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.0",
+    "swiper": "^10.0.4"
+  }
+}

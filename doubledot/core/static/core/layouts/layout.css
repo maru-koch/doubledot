@@ -1,0 +1,15 @@
+/* 1. LAYOUT NAV STYLING  */
+/* ===================== */
+
+.layout{
+    padding:0;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin:0 auto;
+}
+
+.layout-main{
+    margin: 0 auto;
+}
+

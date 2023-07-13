@@ -1,0 +1,93 @@
+.timelineItem__container{
+    display:flex;
+    justify-content:flex-start;
+    padding-left: 30px;
+    border-left: 2px solid var(--text-color);
+}
+
+
+.timelineItem__wrapper{
+    background-color: #fff;
+    box-shadow: 2px 3px 3px rgba(0,0,0,0.2);
+    position:relative;
+    border: 1px solid gainsboro;
+    padding: 20px;
+    margin:20px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.timelineItem__wrapper::after{
+    content:'';
+    position:absolute;
+    width: 20px;
+    /* border: 1px solid var(--header-color); */
+    height:20px;
+    top: calc((50% - 10px));
+    transform: rotate(45deg);
+    border-radius: 50%;
+    left:-3.9rem;
+    z-index: 0;
+    background-color: var(--highlight-color);
+}
+
+.timelineItem__title{
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-family: var(--font-title);
+    color: var(--text-color)
+}
+.timelineItem__desc{
+    font-weight: 200;
+    text-align: left;
+    font-size: 1rem;
+    font-family: var(--font-content);
+    margin-top: 10px;
+}
+
+@media(min-width:600px){
+   
+}
+
+@media(min-width:900px){
+    .timelineItem__wrapper{
+        margin-top: 30px;
+    }
+    .timelineItem__wrapper::before{
+        /* DOT ON HORIZONTAL LINE */
+        width: 20px;
+        height: 20px;
+        content: '';
+        position:absolute;
+        background-color: var(--highlight-color);
+        top: calc((100%/50 - 43px));
+        border-radius: 50%;
+        left: calc(100%/2 - 10px);
+        
+    }
+    .timelineItem__wrapper::after{
+        /* POINTER TO DOT */
+        width: 25px;
+        height:25px;
+        background-color: white;
+        top: calc((100%/6 - 17px));
+        border-radius: 0%;
+        left: calc(100%/2 - 12.5px);
+        transform: rotate(45deg);
+        z-index: -1000;
+    }
+
+    .timelineItem__desc{
+        display: none;
+    }
+
+    .timelineItem__container{
+        justify-content:center;
+        padding-left: 0px;
+        border-left:0px;
+        border-top: 2px solid var(--text-color);
+        margin-top:10px;
+    }
+    
+}
+

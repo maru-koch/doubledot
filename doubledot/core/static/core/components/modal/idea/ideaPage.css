@@ -1,0 +1,91 @@
+
+.idea-page-container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.idea-page-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.idea-page-wrapper .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 150px;
+}
+
+.idea-page-wrapper .radio{
+    color: var(--primary-color);
+    padding:10px;
+}
+
+.idea-page-wrapper .icon{
+    width:70px;
+    margin-top:10px;
+}
+
+
+.idea-page-wrapper .icon img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.idea-page-wrapper .title{
+    width: 100%;
+    text-align: center;
+    padding:0;
+}
+
+.idea-page-wrapper .title h2{
+    padding:0;
+    margin:0;
+}
+
+.idea-page-container .btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idea-page-container .option-prompt{
+    width:100%;
+    background-color: var(--primary-color);
+    color:white;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 5px
+}
+
+.btn{
+    background-color: var(--primary-color);
+    padding: 10px 30px;
+    border-radius: 20px;
+    color:white;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+    outline: none;
+    border: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@media (max-width:500px){
+    .idea-page-wrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .idea-page-wrapper .btn{
+        margin-top:20px;
+    }
+}

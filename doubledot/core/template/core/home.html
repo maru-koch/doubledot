@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}<link rel="stylesheet" href="{% static './layout.css' %}">{% endblock %}
+{% block content %}
+    <div id="root"></div>
+    <div id="portal"></div>
+    <script src="{% static 'index-bundle.js' %}"></script>
+{% endblock%}
+
+<!-- <script id="name" type="application/json">
+    [{"name": "Nwokocha Maruche"}] 
+  </script> -->

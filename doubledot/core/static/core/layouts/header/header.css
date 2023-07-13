@@ -1,0 +1,125 @@
+.header{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    /* width: 100%; */
+    margin: 0px 40px;
+    background-color: white;
+    padding: 0 5px;
+  
+}
+
+.header_menu{
+    width: 30px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2px
+}
+
+.header_menu_bars{
+    width: 100%;
+    display: grid;
+    gap:5px;
+    grid-template-rows: 1fr 1fr 1fr;
+    cursor: pointer;
+}
+
+.header_menu_bars span{
+    height: 3px;
+    background-color:rgb(166, 166, 166);
+}
+
+.header_menu_icon i{
+    color:blueviolet;
+    width: 40px;
+}
+
+.header_doubledot{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_doubledot_logo{
+    width: 50px;
+    height: 50px;
+    background-image: url(../../images/logo.png);
+    padding:2px;
+}
+
+.header_idea{
+    display:block;
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+}
+
+.header_idea h2{
+    border: 2px solid #e04734;
+    color: #e04734;
+    font-size: 1.4rem;
+    padding: 5px 40px;
+    font-weight: 500;
+    font-family: var(--font-title);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.header_idea h2:hover{
+    background-color: var(--primary-color);
+    color:var(--background-color);
+    box-shadow: 2px 2px 7px gray;
+}
+.header_icons{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_icons i{
+    font-size: 1.2rem;
+    color:var(--primary-color);
+    padding: 10px;
+}
+
+@media(max-width:600px){
+    .header{
+        padding: 10px 20px;
+    }
+
+    .header_icons{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .header_icons i{
+        font-size: 1rem;
+        color:var(--primary-color);
+        padding: 5px;
+        margin:0 5px;
+        cursor: pointer;
+    }
+    
+    .header_idea{
+        display: none;
+    }
+}
+
+@media(max-width:800px){
+    .header_idea{
+        visibility: hidden;
+    }
+}
+
+
+/* 2. LAYOUT MENU STYLING  */
+/* ======================= */
+

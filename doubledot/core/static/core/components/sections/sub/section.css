@@ -1,0 +1,28 @@
+
+.section-wrapper{
+    margin:0 auto;
+}
+
+.section-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* background-image: url(../static/icons/logo_gray.png); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.section-header h2, .section-header p{
+    text-align: center;
+}
+
+.section-header h2{
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.section-header p{
+    color:var(--text-color-2)
+}
