@@ -1,20 +1,19 @@
-import React from "react"
-import './footer.css'
+import React from 'react'
+import { Section } from "../../components/sections/sub/section"
+import {CopyRight, Address, WhatWeDo, Company, CompanyInfo} from './footer-components'
+import classes from './footer.module.css'
 
-export const Footer=()=>{
+export const Footer =()=>{
     return (
-        <footer className="footer-container">
-            <div className="footer-wrapper">
-                {/* COMPONENTS HERE */}
-                <div className="footer-copyright-holder">
-                    <p>&copy; 2023, Doubledot Technologies. All right reserved</p>
-                </div>
-                <ul className="footer-nav">
-                        <li className="nav-item">Home</li>
-                        <li className="nav-item">About Us</li>
-                        <li className="nav-item">Contact</li>
-                </ul>
+        <Section bg ="var(--main-color">
+            <div className={classes.footer_wrapper}>
+                <Company/>
+                {/* <CompanyInfo/> */}
+                <WhatWeDo/>
+                <Address/>
             </div>
-        </footer>
+            <CopyRight/>
+        </Section>
     )
 }
+

@@ -1,0 +1,51 @@
+.company_logo{
+    color:var(--highlight-color);
+    font-weight: 600;
+}
+
+.company_tagline{
+    margin: 40px 0;
+}
+.company_socialmedia{
+    margin-top:20px;
+}
+
+.company_socialmedia h3{
+    color:var(--footer-title-color)
+}
+
+.company_social_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100px;
+    margin-top:10px;
+}
+
+.company_socialmedia_icons{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--btn-border-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.company_socialmedia_icons i{
+    color: var(--footer-text-color);
+}
+
+.company_socialmedia_icons:focus{
+    color: var(--secondary-color);
+    background-color: var(--background-color)
+}
+
+.company_socialmedia_icons:hover{
+    color: var(--footer-title-color);
+    transform: Scale(1.05);
+    background-color: var(--hightlight-color);
+    transition: transform 0.6s ease-in-out;
+}

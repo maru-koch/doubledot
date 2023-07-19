@@ -1,13 +1,18 @@
 .header{
+    background-color:var(--main-color);
+    padding: 0 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header_wrapper{
     display: grid;
     flex-direction: row;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    /* width: 100%; */
-    margin: 0px 40px;
-    background-color: white;
-    padding: 0 5px;
-  
+    margin: 0px 20px;
+    background-color:transparent;
 }
 
 .header_menu{
@@ -33,7 +38,6 @@
 }
 
 .header_menu_icon i{
-    color:blueviolet;
     width: 40px;
 }
 
@@ -52,72 +56,83 @@
 }
 
 .header_idea{
-    display:block;
-    display: flex;
-    justify-content: flex-end;
+    display:none;
     width:100%;
 }
 
-.header_idea h2{
-    border: 2px solid #e04734;
-    color: #e04734;
-    font-size: 1.4rem;
-    padding: 5px 40px;
-    font-weight: 500;
-    font-family: var(--font-title);
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.header_idea h2:hover{
-    background-color: var(--primary-color);
-    color:var(--background-color);
-    box-shadow: 2px 2px 7px gray;
-}
 .header_icons{
-    display: none;
-    justify-content: center;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.header_icons i{
-    font-size: 1.2rem;
-    color:var(--primary-color);
-    padding: 10px;
+.header_idea h2{
+    border: 2px solid var(--highlight-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding: 10px 20px; 
+    font-weight: 500;
+    font-family: var(--font-title);
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    max-width: 300px;
 }
 
-@media(max-width:600px){
-    .header{
-        padding: 10px 20px;
-    }
+.header_icons i{
+    font-size: 1rem;
+    color:var(--primary-color);
+    padding: 10px;
+    cursor: pointer;
+}
 
-    .header_icons{
-        display: block;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .header_icons i{
-        font-size: 1rem;
-        color:var(--primary-color);
-        padding: 5px;
-        margin:0 5px;
-        cursor: pointer;
+@media(min-width:600px){
+    .header_wrapper{
+        margin: 0px 20px;
+        padding:10px 0;
     }
     
     .header_idea{
+        display: flex;
+        justify-content: flex-end;
+        width:100%;
+    }
+
+    .header_idea h2{
+        border: 2px solid var(--highlight-color);
+        color: var(--primary-color);
+        font-size: 1.4rem;
+        padding: 10px 20px; 
+        font-weight: 500;
+        font-family: var(--font-title);
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        max-width: max-content;
+    }
+
+    .header_idea h2:hover{
+        background-color: var(--primary-color);
+        color:var(--background-color);
+        box-shadow: 2px 2px 7px gray;
+    }
+    .header{
+        padding: 0 20px;
+    }
+    .header_icons{
         display: none;
     }
 }
 
-@media(max-width:800px){
-    .header_idea{
-        visibility: hidden;
+@media(min-width:900px){
+    .header_wrapper{
+        margin: 0px 40px;
+        padding:20px 0;
     }
+    
 }
+
 
 
 /* 2. LAYOUT MENU STYLING  */

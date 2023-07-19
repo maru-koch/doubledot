@@ -1,46 +1,43 @@
-.section{
-    background-color: var(--background-2-color);
-    padding-bottom: 100px;
-    padding:50px;
-}
 
-.section h2{
-    color: var(--word-light);
-}
-
-.section h4{
-    color: var(--word-light);
-}
-.subscribe__container{
+.contact_form_container{
    display: flex;
    justify-content: center;
    align-items: center;
    width: 100%;
-   padding-bottom: 100px;
+   margin:0 auto;
 }
 
-.subscribe__wrapper{
+.contact_form{
+    /* max-width: 800px; */
+    /* width: 100%; */
+    margin: 10px auto;
+    /* height: max-content; */
     display: grid;
-    grid-template-columns: 8fr 4fr;
     place-content: center;
-    width: 500px;
-    height: 40px;
-    background-color:var(--color);
-    border-radius: 5px;
-    border: 1px solid var(--accent-3-color);
-    border-radius: 5px
+    overflow-y: hidden;
+    
 }
-.subscribe__wrapper input{
+.contact_form_input_wrapper{
+    display: grid;
+    place-content: center;
+    gap:10px;
+    width:100%;
+    margin:10px 0;
+    /* margin:0 20px; */
+}
+.contact_form_input{
     padding: 15px;
     color: var(--text-color);
     background-color: white;
-    font-family: Poppins;
-    border: 1px solid rgb(210, 210, 210);
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    font-family: var(--font-content);
+    border: 1px solid rgb(178, 177, 177);
+    border-radius: 5px;
+    width:350px;
+    font-style: 1.2rem;
 }
 
-.subscribe__wrapper input:focus{
+
+.contact_form_input:focus{
     outline: none;
 }
 
@@ -53,7 +50,42 @@
     border-bottom-right-radius: 5px
 }
 
-.subscribe__wrapper button:focus {
-    outline: none;
-    cursor: pointer;
+.contact_form_textarea textarea{
+    width: 100%;
+    /* padding:10px; */
+    font-size: 1rem;
+}
+
+@media(min-width:900px){
+    .contact_form_input_wrapper, .contact_form_textarea{
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin:10px 20px;
+        gap:0px;
+
+    }
+    .contact_form_input.left{
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 00px;
+        border-top-right-radius: 00px;
+    }
+    
+    .contact_form_input.right{
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    .contact_form{
+        margin:20px 5%;
+    }
+    .contact_form_textarea{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact_form_textarea textarea{
+        width: 97%;
+        /* padding:10px; */
+    }
 }

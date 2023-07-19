@@ -1,0 +1,19 @@
+
+.about_container{
+    width: 100%;
+    margin:0 auto;
+
+}
+
+.about_wrapper{
+    margin:0 2rem;
+    padding-top:10%;
+}
+
+@media(min-width){
+    .about_wrapper{
+        margin:0 5rem;
+        padding-top:0;
+    }
+    
+}

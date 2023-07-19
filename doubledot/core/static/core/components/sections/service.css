@@ -8,19 +8,21 @@
     width: 100%;
     overflow: hidden;
     border-radius: 5px;
+
 }
 
 .service-card{
     position:relative;
-    background-color: white;
+    background-color:  #f1f0f0;
     box-shadow: 2px 3px 5px rgba(0, 0,0, 0.5);
     border-radius: 5px;
-    border:2px solid rgb(200, 200, 200);
+    /* border:2px solid rgb(200, 200, 200); */
     padding:20px;
     display: grid;
     grid-template-columns: 3fr 7fr;
     cursor: pointer;
     height: 100%;
+    border-radius: 5px;
 }
 
 .overlay{
@@ -35,8 +37,8 @@
     display: grid;
     grid-template-columns: 3fr 7fr;
     cursor: pointer;
-    background-image: linear-gradient(45, red, green);
-    background-color: var(--highlight-color);
+    /* background-image: url(../../../../../static/images/service_card_bg_.png); */
+    background-color: var(--primary-color);
     transform: translateY(200px);
     z-index: 1000;
     transition: .3s ease-in;
@@ -45,12 +47,14 @@
 
 .card:hover .overlay{
     transform: translateY(-10px);
+    height: 210px;
 }
 
 
 
 .service-card .service-title{
-    color: var(--title-color)
+    color: var(--primary-color);
+    font-family: var(--font-title);
 }
 
 .service-card .service-description{
@@ -62,12 +66,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:20px;
+    /* padding:20px;  */
+    position: relative;
+    background-color: red;
+
+
 }
 
-.service-img img{
-    object-fit: contain;
-    width: 100%;
+.service-img i{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    transform: scale(2);
+    padding:10px;
+    color:var(--primary-color)
 }
 
 .service-grid-3x2{
@@ -85,17 +98,23 @@
 }
 
 .overlay .service-description{
-    color: greenyellow;
+    /* color: greenyellow; */
     margin-top:10px;
     color:var(--background-color);
 
 }
 
-.overlay .service-icon{
+.service-icon{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 5px;
+}
+
+.service-icon i{
+    font-size: 1.2rem;
+    margin:5px;
+    color:var(--primary-color);
 }
 
 .overlay .service-icon i{
@@ -103,6 +122,11 @@
     margin:5px;
     color:white;
 }
+
+.overlay .service-img i{
+    color:white;
+}
+
 @media(min-width:600px){
     .service-grid-3x2{
         grid-template-columns: repeat(2, 1fr);

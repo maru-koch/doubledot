@@ -1,20 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Work+Sans:wght@300;400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Work+Sans:wght@300;400;500;700&display=swap'); */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;700&display=swap&family=Lato:wght@300;400&family=Roboto:wght@300;400;500;700;900&display=swap');
 
 :root{
     --font-content:"Work Sans";
-    --font-title:"Roboto";
+    --font-title:"Lato";
+    --font-header:"Roboto";
     --font-size:16px;
     --background-color:#fbfbfb;
-    /* --primary-color:#e04734; */
+    --section-background-color:#f1f0f0;
     --primary-color:#ea7822;
-    --color-header:gray;
-    --main-color:#344258;
+    --main-color:#14284b;
+    /* --main-color:#1a315a; */
     --title-color:#353e4c;
     --text-color-2:#434d5d;
     --text-color:#828282;
-    --footer-text-color:#97a8c2;
+    --footer-text-color:#f1f0f0;
+    --footer-text-p:#d1e8fd;
     --section-background-color:#eff4f7;
     --highlight-color:#00cfb1;
+    --highlight-color:#ea7822;
+    --footer-title-color: #eff4f7;
+    --panel-color:#455571;
+    --k: #14284b
 }
 *{
     margin:0;
@@ -65,4 +73,18 @@ body p{
     font-weight: 500;
 }
 
+.title{
+    font-family: var(--font-title);
+    text-align: left;
+    color:var(--text-color-2);
+    font-weight: 600;
+    width: 100%;
+    font-size: 1.6rem;
+    padding:10px 0;
+}
+
+.description{
+    margin:10px 0px;
+    color:var(--text-color-2)
+}
 

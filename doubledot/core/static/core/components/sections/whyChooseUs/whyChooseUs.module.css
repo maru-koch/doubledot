@@ -34,12 +34,8 @@
     margin:0 40px;
 } */
 
-.whyChooseUs_title{
-    color:var(--text-color)
-}
-
 .whyChooseUs_description{
-    margin:20px 0px;
+    margin:10px 0px;
     color:var(--text-color-2)
 }
 

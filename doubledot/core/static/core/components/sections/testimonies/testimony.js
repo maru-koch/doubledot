@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
+// import SwiperCore, { } from "swiper";
 
 const Card=({testimony, name, pic, position})=>{
     return (
@@ -30,7 +30,7 @@ const Card=({testimony, name, pic, position})=>{
 }
 
 export const Testimony = ()=>{
-    SwiperCore.use([Autoplay, Navigation])
+    // SwiperCore.use([Navigation])
     return (
         <Section title = "What Our Clients are Saying" subtitle ="Our Smart processes, partnership, and results speak for themselves">
             <div className = "swiper__container">

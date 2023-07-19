@@ -1,0 +1,84 @@
+## FRONTEND SETUP
+- package manager: npm or yarn
+- bundler: webpack
+- compiler or transpiler: babel
+
+# WEBPACK CONFIGURATION
+- npm init -y
+- npm install webpack webpack-cli --save-dev
+==========================================
+- ./frontend/index.js
+==========================================
+function component() {
+  const element = document.createElement('div');
+  element.innerHTML = 'Hello webpack';
+  return element;
+}
+document.body.appendChild(component());
+==========================================
+- ./webpack.config.js
+
+-const path = require('path');
+module.exports = {
+  entry: './assets/index.js',  // path to our input file
+  output: {
+    filename: 'index-bundle.js',  // output bundle file name
+    path: path.resolve(__dirname, './static'),  // path to our Django static directory
+  },
+};
+==========================================
+./package.json
+
+ "scripts": {
+    (other stuff here)
+    "dev": "webpack --mode development --watch"
+  }
+==========================================
+- npm run dev
+===========================================
+./templates/webpack.html
+
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started with Django and Webpack</title>
+  </head>
+  <body>
+    <script src="{% static 'index-bundle.js' %}"></script>
+  </body>
+</html>
+
+===========================================
+./doubledot/urls.py
+
+urlpatterns = [
+  # other patterns here
+  path('hello-webpack/', TemplateView.as_view(template_name='hello_webpack.html'))
+]
+
+===========================================
+./doubledot/settings.py
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+# BABEL CONFIGURATION
+===========================================
+- npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-react
+
+===========================================
+- START TAILWIND 
+### npm run tailwind-watch
+===========================================
+## css-loader, style-loader
+===========================================
+- To automatically load css files on page load and reload
+===========================================
+- webpack.config.js
+- {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+===========================================

@@ -3,22 +3,24 @@ import './service.css'
 import { services } from '../../constants/services'
 import { Section } from './sub/section'
 
-const Card=({imgUrl, imgUrl2, title, description})=>{
+const Card=({icon, title, description})=>{
     return (
         <div className="card">
             <div className='service-card'>
                 <div className='service-img'>
-                    <img src={imgUrl} alt={title}/>
+                    <i className={icon}></i>
                 </div>
                 <div>
                     <h3 className='service-title'>{title}</h3>
                     <p className='service-description'>{description}</p>
+                    <div className='service-icon'>
+                        <i className='fas fa-arrow-right'></i>
+                    </div>
                 </div>
-                {/* OVERLAY */}
             </div>
             <div className='overlay'>
                 <div className='service-img'>
-                    <img src={imgUrl} alt={title}/>
+                    <i className={icon}></i>
                 </div>
                 <div>
                     <h3 className='service-title'>{title}</h3>
@@ -55,8 +57,7 @@ export const Services=()=>{
                         serviceArr.map((service, id)=>
                             <Card 
                                 key={id}
-                                imgUrl={service.imageUrl} 
-                                imgUrl2={service.imageUrl2}
+                                icon={service.icon} 
                                 title={service.title} 
                                 description={service.description}
                             />

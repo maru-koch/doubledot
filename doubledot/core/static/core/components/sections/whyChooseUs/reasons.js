@@ -19,7 +19,7 @@ export const Reasons=()=>{
     return (
         <main className={classes.reasons__container} >
             <section className={classes.reasons__wrapper}>
-                {reasons.map(stat =><Why icon = {stat.icon} title ={stat.title} desc={stat.description} bg={stat.bg} />)}
+                {reasons.map((stat, id) =><Why key={id} icon = {stat.icon} title ={stat.title} desc={stat.description} bg={stat.bg} />)}
             </section>
         </main>
     )

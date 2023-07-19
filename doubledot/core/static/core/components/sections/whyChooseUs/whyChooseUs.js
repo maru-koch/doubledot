@@ -16,8 +16,8 @@ export const WhyChooseUs =()=>{
                 </div>
                 <div className = {classes.whyChooseUs_right}>
                     <div className = {classes.whyChooseUs_words}>
-                        <h2 className={classes.whyChooseUs_title}>Why Choose Us ?</h2>
-                        <p className={classes.whyChooseUs_description}>
+                        <h2 className={`${classes.whyChooseUs_title} title`}>Why Choose Us?</h2>
+                        <p className='description'>
                             We have dedicated team of Engineers with different specialties in 
                             technologies. So, you can be rest assured of quality and timely delivery.
                             We are best in developing innovative and practical solutions.

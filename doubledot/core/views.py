@@ -8,7 +8,7 @@ from core.tasks import send_email
 from core.models import Enquiry
 # Create your views here.
 
-class HomeView(ListView):
+class IndexView(ListView):
     queryset = Enquiry.objects.all()
     template_name="core/home.html"
 
@@ -16,7 +16,8 @@ class HomeView(ListView):
         context = super().get_context_data(**kwargs)
         context['name'] = 'Nwokocha Maruche'
         return context
-    
+
+
 
 class EnquiryView(APIView):
     def post(self, request):

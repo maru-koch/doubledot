@@ -19,8 +19,8 @@ export const DevelopmentCycle =({timeLineData})=>{
                 <div className={classes.timeline__agile}>
                     <div className={classes.timeline__agile_wrapper}>
                         <div className={classes.timeline__agile_left}>
-                            <h3 className={classes.timeline__agile_content}>OUR AGILE PROCESSES</h3>
-                            <div className={classes.timeline__agile_content}>
+                            <h3 className={`${classes.timeline__agile_title} title`}>Our Agile Processes</h3>
+                            <div className='description'>
                                 <p>
                                     We follow the Agile Software development cycle. From conceptualization
                                     to product launch, maintainance and support, we help our client maximize
