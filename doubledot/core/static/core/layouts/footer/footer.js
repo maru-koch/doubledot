@@ -8,7 +8,7 @@ export const Footer =()=>{
         <Section bg ="var(--main-color">
             <div className={classes.footer_wrapper}>
                 <Company/>
-                {/* <CompanyInfo/> */}
+                <CompanyInfo/>
                 <WhatWeDo/>
                 <Address/>
             </div>

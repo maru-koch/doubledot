@@ -1,6 +1,6 @@
 import React from "react"
 import './menubar.css'
-
+import { Link, NavLink} from "react-router-dom"
 export const MenuBar=({openMenu, setOpenMenu})=>{
     if (!openMenu) return null
     return (
@@ -18,26 +18,26 @@ export const MenuBar=({openMenu, setOpenMenu})=>{
                     <i className="fas fa-close menu-close" onClick={()=>setOpenMenu(false)}></i>
                 </div>
                 <div className="menu-item-container">
-                    <div className="menu-item">
+                    <Link className="menu-item" to={'/'}>
                         <i className="fas fa-home"></i>
                         <p>Home</p>
-                    </div>
-                    <div className="menu-item">
+                    </Link>
+                    <Link className="menu-item" to={'/'}>
                         <i className="fas fa-tools"></i>
                         <p>Services</p>
-                    </div>
-                    <div className="menu-item">
+                    </Link>
+                    <Link className="menu-item">
                         <i className="fas fa-box"></i>
                         <p>Technologies</p>
-                    </div>
-                    <div className="menu-item">
+                    </Link>
+                    <Link className="menu-item" to={'/about'}>
                         <i className="fas fa-info"></i>
                         <p>About</p>
-                    </div>
-                    <div className="menu-item">
+                    </Link>
+                    <Link className="menu-item" to={'/contact'}>
                         <i className="fas fa-envelope"></i>
                         <p>Contact</p>
-                    </div>
+                    </Link>
                 </div>
             </section>
         </aside>

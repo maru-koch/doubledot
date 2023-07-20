@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from '../footer.module.css'
+import { Link } from 'react-router-dom'
 
 export const Address =()=>{
     // displays opening time, address, and phone Number
@@ -14,7 +15,7 @@ export const Address =()=>{
                         </div>
                         <div className={classes.footerCard__address_bar}>
                             <h3>Address</h3>
-                            <p>No. 2 Uduak Crescent, Magboro</p>
+                            <p><Link className="link">No. 2 Uduak Crescent, Magboro</Link></p>
                         </div>
                     </div>
                     <div className ={classes.footerCard__address_box}>
@@ -23,7 +24,7 @@ export const Address =()=>{
                         </div>
                         <div className={classes.footerCard__address_bar}>
                             <h3>Email</h3>
-                            <p>contact@doubledot.com</p>
+                            <p><Link className="link">contact@doubledot.com</Link></p>
                         </div>
                     </div>
                     <div className ={classes.footerCard__address_box}>
@@ -32,7 +33,7 @@ export const Address =()=>{
                         </div>
                         <div className={classes.footerCard__address_bar}>
                             <h3>Phone</h3>
-                            <p>+2349012693884</p>
+                            <p><Link className="link">+2349012693884</Link></p>
                         </div>
                     </div>
                     <div className ={classes.footerCard__address_box}>
@@ -41,7 +42,7 @@ export const Address =()=>{
                         </div>
                         <div className={classes.footerCard__address_bar}>
                             <h3>Office Hours</h3>
-                            <p>8:00 AM - 5:00PM</p>
+                            <p><Link className="link">8:00 AM - 5:00PM</Link></p>
                         </div>
                     </div>
                 </div>

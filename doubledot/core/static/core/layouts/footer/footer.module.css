@@ -59,7 +59,7 @@
 
 @media(min-width:900px){
     .footer_wrapper{
-        grid-template-columns: 4fr 3fr 3fr;
+        grid-template-columns: 3fr 2fr 2fr 3fr;
         gap:20px;
     }
     .footerCard__wrapper{

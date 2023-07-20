@@ -22,10 +22,6 @@ form{
     margin: 0 20px;
 }
 
-.form-input-wrapper {
-   
-}
-
 .form-input-wrapper label{
     color:var((--header-color));
     margin: 10px 5px;
@@ -90,12 +86,13 @@ form{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 40px;
+    margin: 20 40px;
 }
 
 .form-input-wrapper.confirmation .form-check p{
     margin-left:20px;
-    color: var(--header-color)
+    color: var(--header-color);
+    font-size:.9rem;
 }
 
 @media (max-width:500px){
@@ -128,10 +125,16 @@ form{
     }
     
     .form-input-wrapper.confirmation .form-check{
-        margin: 0 20px;
+        margin: 20px;
     }
     .form-input-wrapper.confirmation .form-check p{
         margin-left:5px;
+    } 
+}
+
+@media(min-width:600px){
+    .form-input-wrapper.confirmation .form-check{
+        margin: 20px 10px;
     }
     
 }

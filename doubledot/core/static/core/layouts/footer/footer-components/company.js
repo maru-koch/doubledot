@@ -1,5 +1,6 @@
 import React from "react"
 import classes from './company.module.css'
+import { Link } from "react-router-dom"
 
 export const Company=()=>{
     return(
@@ -9,7 +10,7 @@ export const Company=()=>{
                 <h1 className={classes.company_logo}>Doubled<span>o</span>t</h1>
             </div>
             <div className={classes.company_tagline}>
-                <p>We Help Businesses succeed through innovative product design, development, and smart processes</p>
+                <p><Link className="link">We Help Businesses succeed through innovative product design, development, and smart processes</Link></p>
             </div>
             <div className ={classes.company_socialmedia}>
                 <h3>Connect with Us</h3>

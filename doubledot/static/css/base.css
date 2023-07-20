@@ -8,6 +8,7 @@
     --font-header:"Roboto";
     --font-size:16px;
     --background-color:#fbfbfb;
+    --background-color-2:#f1f0f0;
     --section-background-color:#f1f0f0;
     --primary-color:#ea7822;
     --main-color:#14284b;
@@ -65,12 +66,13 @@ body p{
     background-color: var(--primary-color);
     padding: 10px 30px;
     border-radius: 20px;
-    color:white;
+    color:var(--background-color-2);
     box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
     outline: none;
     border: 0;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: .9rem;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .title{
@@ -86,5 +88,14 @@ body p{
 .description{
     margin:10px 0px;
     color:var(--text-color-2)
+}
+
+.link{
+    color:var(--footer-text-p);
+    text-decoration: none;
+}
+
+.link:active, .link:hover{
+    color:var(--footer-text-color)
 }
 

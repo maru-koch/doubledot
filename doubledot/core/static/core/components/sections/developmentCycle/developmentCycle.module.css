@@ -2,7 +2,7 @@
 .timeline__container{
     height: max-content;;
     position: relative;
-    margin: 40px 0;
+    padding: 40px 0;
 }
 
 /* Vertical line */

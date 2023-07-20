@@ -40,7 +40,7 @@ export const Header=({setOpenMenu, openIdea, openPhone})=>{
                 </div>
                 {/* BUTTON */}
                 <div className="header_idea">
-                    <h2 onClick={()=>openIdea()}>Got an Idea?</h2>
+                    <h2 onClick={()=>openIdea()}>Got an Idea ?</h2>
                 </div> 
                 <div className="header_icons">
                     <i id="header_phone_icon" className="fa-solid fa-phone" onClick={()=>openPhone()}></i>

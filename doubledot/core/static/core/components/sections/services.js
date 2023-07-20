@@ -7,27 +7,31 @@ const Card=({icon, title, description})=>{
     return (
         <div className="card">
             <div className='service-card'>
-                <div className='service-img'>
-                    <i className={icon}></i>
-                </div>
-                <div>
-                    <h3 className='service-title'>{title}</h3>
-                    <p className='service-description'>{description}</p>
-                    <div className='service-icon'>
-                        <i className='fas fa-arrow-right'></i>
+                <div className='service-wrapper'>
+                    <div className='service-img'>
+                        <i className={icon}></i>
                     </div>
+                    <div>
+                        <h3 className='service-title'>{title}</h3>
+                        <p className='service-description'>{description}</p>
+                    </div>
+                </div>
+                <div className='service-icon'>
+                    <i className='fas fa-arrow-right'></i>
                 </div>
             </div>
             <div className='overlay'>
-                <div className='service-img'>
-                    <i className={icon}></i>
-                </div>
-                <div>
-                    <h3 className='service-title'>{title}</h3>
-                    <p className='service-description'>{description}</p>
-                    <div className='service-icon'>
-                        <i className='fas fa-arrow-right'></i>
+                <div className='service-wrapper'>
+                    <div className='service-img'>
+                        <i className={icon}></i>
                     </div>
+                    <div>
+                        <h3 className='service-title'>{title}</h3>
+                        <p className='service-description'>{description}</p>
+                    </div>
+                </div>
+                <div className='service-icon'>
+                    <i className='fas fa-arrow-right'></i>
                 </div>
             </div>
         </div>

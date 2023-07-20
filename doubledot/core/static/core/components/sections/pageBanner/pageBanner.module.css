@@ -1,0 +1,29 @@
+
+.banner_container{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 200px;
+    margin-top: 3%;
+}
+
+.banner_wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_pageTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.banner_pageTitle h2{
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 1.6rem;
+    font-family: var(--font-title);
+    font-weight: 600;
+    padding:20px 40px;
+    color:var(--footer-text-p)
+}

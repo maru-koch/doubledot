@@ -1,16 +1,22 @@
 
 .idea-page-container{
+    height: max-content;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-y: scroll;
+    margin: 0 auto; 
 }
 
 .idea-page-wrapper{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin:0 20px;
+    gap:10px;
 }
 
 .idea-page-wrapper .card{
@@ -18,8 +24,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* padding: 10px; */
     width: 150px;
+    height: max-content;
 }
 
 .idea-page-wrapper .radio{
@@ -32,7 +38,6 @@
     margin-top:10px;
 }
 
-
 .idea-page-wrapper .icon img{
     object-fit: cover;
     width: 100%;
@@ -42,6 +47,8 @@
     width: 100%;
     text-align: center;
     padding:0;
+    font-size: 1rem;
+    padding:5px
 }
 
 .idea-page-wrapper .title h2{
@@ -79,13 +86,30 @@
     font-weight: 500;
 }
 
-@media (max-width:500px){
+@media (min-width:600px){
     .idea-page-wrapper{
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .idea-page-wrapper .btn{
         margin-top:20px;
     }
+
+    .idea-page-wrapper .card{
+        width: 200px;
+        margin: 0px;
+    }
+    
+}
+
+@media(min-width:900px){
+    .idea-page-container{
+        overflow: hidden;  
+    }
+    .idea-page-wrapper .card{
+        width: 150px;
+        margin: 0px 0px;
+    }
+    
 }

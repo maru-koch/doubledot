@@ -4,6 +4,9 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
+    top:0;
+    left:0;
+    right:0;
 }
 
 .header_wrapper{
@@ -72,12 +75,12 @@
     color: var(--primary-color);
     font-size: 1rem;
     padding: 10px 20px; 
-    font-weight: 500;
+    font-weight: 400;
     font-family: var(--font-title);
     border-radius: 50px;
     text-align: center;
     cursor: pointer;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 .header_icons i{
@@ -102,7 +105,7 @@
     .header_idea h2{
         border: 2px solid var(--highlight-color);
         color: var(--primary-color);
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         padding: 10px 20px; 
         font-weight: 500;
         font-family: var(--font-title);
@@ -130,7 +133,10 @@
         margin: 0px 40px;
         padding:20px 0;
     }
-    
+    .header_idea h2{
+        font-size: 1.2rem;
+        padding: 10px 40px; 
+    }
 }
 
 

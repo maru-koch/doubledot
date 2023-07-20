@@ -94,12 +94,12 @@ export const data = [
                     {
                         "icon":"static/icons/sketches.svg", 
                         "rodio":true,
-                        "title":"Idea/Sketches"
+                        "title":"Idea"
                     },
                     {
                         "icon":"static/icons/prototype.svg", 
                         "rodio":true,
-                        "title":"Prototype"
+                        "title":"Sketches"
                     },
                     {
                         "icon":"static/icons/development.svg", 

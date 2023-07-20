@@ -24,7 +24,7 @@ export const DevelopmentCycle =({timeLineData})=>{
                                 <p>
                                     We follow the Agile Software development cycle. From conceptualization
                                     to product launch, maintainance and support, we help our client maximize
-                                    their product's potential by harnassing the best techniques and procedure 
+                                    their product's potential by harnassing the best techniques and technologies 
                                     in design and development.
                                 </p>
                                 <div className='btn-holder'>

@@ -1,26 +1,28 @@
 import React from "react"
-import classes from './about.module.css'
+import { useState } from "react"
+import classes from './contact.module.css'
+import { Subscribe, Testimony, PageBanner } from "../components"
+import { Layout } from "../layouts/layout"
 
 export const Contact=()=>{
- 
+    const [email, setEmail] = useState({email:''})
+
+    const onChangeHandler=(e)=>{
+        setEmail({...email, [e.target.name]:e.target.value})
+    }
+
+    const onSubmitHandler=(e)=>{
+        //
+    }
+
     return (
-        <div style={bg}>
-            <div className ={classes.formContainer}>
-            <h4>{title}</h4>
-            <form onSubmit={onSubmitHandler}>
-                <input type = "text" placeholder = "Name"/>
-                <input type = "email" placeholder = "Email Address"/>
-                <input type = "phone" placeholder = "Phone"/>
-                <textarea type = "text" placeholder = "Your Message to Us"></textarea>
-                <div className={classes.form__checkbox__container}>
-                    {children}
-                </div>
-                <div class = {classes.btnHolder}>
-                    <button>{btnText}</button>
-                </div>
-            </form>
+        <Layout>
+            <PageBanner page_title={'Contact Us'}/>
+            <div className={classes.contact_wrapper}>
+                <Subscribe/>
+                <Testimony/>
             </div>
-        </div>
+        </Layout>
     )
 }
 

@@ -3,8 +3,7 @@ export const testimonies =[
         {
             name: 'Quossem Bello', 
             pic: 'static/images/user_1.jpg',
-            testimony: `The Dotgrid Analytics offers the leverage to make the most of 
-                        energy data and reporting. highly recommended for any energy manager`,
+            testimony: `We were able to delive our project on budget because of the expertise of doubledot engineers. They are exceptionals`,
             position: 'CEO, Onix',
             company: 'XYZ Inc'
         
@@ -12,16 +11,15 @@ export const testimonies =[
         {
             name: 'Jasper Omelukor', 
             pic:  'static/images/user_2.jpg', 
-            testimony: `With dotgrid, I can control my home appliances from anywhere.
-                        I can automate energy consumption by setting when an appliance goes on or off`,
-            position: 'Home Owner',
-            company: ''
+            testimony: `Nothing beats working with a Team that brings efficient and competence to a project. The doubledot team is simply amazing`,
+            position: 'Manager',
+            company: 'Okani wears'
 
         },
         {
             name: 'Halima Jumia', 
-            pic: 'static/images/user_3.jpg',
-            testimony: ` Dotgrid dashboard is really a life saver. Generated reports can easily be shared or exported in variety of formats.`,
+            pic: 'static/images/user_4.png',
+            testimony: `The evidence of a reliable and funtional product speaks for itself. Go for doubledot.`,
             position: 'Product manager',
             company: 'Meta Inc'   
         },

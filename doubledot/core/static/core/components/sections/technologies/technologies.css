@@ -68,6 +68,14 @@
         max-width: 100%;
     }
 
+    .technology_container table{
+        width:100%;
+        padding: 20px 0
+    }
+    
+}
+
+@media(min-width:900px){
     .tech-stacks .tech-icon{
         display: flex;
         justify-content: center;
@@ -78,13 +86,4 @@
         transform: scale(2);
         color:var(--primary-color)
     }
-    .technology_container table{
-        width:100%;
-        padding:20px;
-    }
-    
-}
-
-@media(min-width:900px){
-
 }

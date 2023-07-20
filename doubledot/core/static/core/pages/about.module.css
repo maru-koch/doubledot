@@ -2,7 +2,6 @@
 .about_container{
     width: 100%;
     margin:0 auto;
-
 }
 
 .about_wrapper{
@@ -10,10 +9,144 @@
     padding-top:10%;
 }
 
-@media(min-width){
+.about_wrapper p{
+    margin:10px 0;
+}
+
+.about_whoWeAre{
+    margin-top:20px;
+}
+
+.about_whoWeAre h2{
+    font-size:1.4rem;
+}
+
+.about_creativity{
+    margin:40px 0;
+}
+.about_cardContainer{
+    width: 100%;
+}
+
+.about_card{
+    padding:10px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.about_cardTitle{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+
+.about_cardTitle h3{
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: left;
+    align-items: center;
+    font-weight: 400;
+}
+
+.about_cardContent p{
+    color:var(--text-color-2)
+}
+
+.about_cardImage{
+    max-width: 400px;
+    height: auto;
+    padding:10px;
+}
+
+.about_cardImage img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.about_creativity blockquote{
+    font-size:1.4rem;
+    padding: 10px 0;
+}
+
+@media(min-width:600px){
+    .about_whoWeAre{
+        margin-top:40px 60px;
+    }
+    .about_whoWeAre h2{
+        font-size:1.6rem;
+    }
     .about_wrapper{
         margin:0 5rem;
         padding-top:0;
     }
+
+    .about_cardImage{
+        max-width: 100%;
+        height: auto;
+        padding:20px 40px;
+    }
+    .about_card{
+        width: 100%;
+        padding:20px;
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .about_card p{
+        font-size: 1.2rem;
+        padding:10px 20px;
+    }
+    
+    
+}
+@media(min-width:900px){
+    .about_wrapper{
+        margin-top:0px;
+    }
+
+    .about_whoWeAre{
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        margin-top:10%;
+    }
+
+    .about_whoWeAre h2{
+        font-size:2rem;
+
+    }
+
+    .about_whoWeAre p{
+        max-width: 600px;
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+
+    .about_creativity{
+        margin: 40px 0
+    }
+    .about_creativity h2{
+        font-size: 2rem;
+        font-family: var(--font-title);
+    }
+
+    .about_creativity blockquote{
+        font-size:1.8rem;
+        padding: 20px 0;
+        font-family: var(--font-content);
+        color:var(--text-color-2)
+    }
+    .about_cardContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap:20px;
+        padding:20px;
+    }
+
+
+
     
 }
