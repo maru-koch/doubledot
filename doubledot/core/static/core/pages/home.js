@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout } from "../layouts/layout";
-import { Banner, Article, Services, Technologies, DevelopmentCycle, WhyChooseUs, Subscribe, Testimony } from '../components';
+import { Banner, Article, SpeedAdvantage,Technologies, DevelopmentCycle, WhyChooseUs, Subscribe, Testimony } from '../components';
  
 
 
@@ -9,7 +9,7 @@ export const Home=()=>{
         <Layout>
             <Banner/>
             {/* <Article/> */}
-            <Services/>
+            <SpeedAdvantage/>
             <DevelopmentCycle/>
             <Technologies/>
             <WhyChooseUs/>

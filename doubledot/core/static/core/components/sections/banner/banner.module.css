@@ -28,6 +28,15 @@
     width: max-content;
     text-align: center;
     display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header_wrapper .banner_left{
+    margin-top:40px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -45,12 +54,7 @@
     color:var(--background-color)
 }
 
-.header_wrapper p{
-    font-size: 1.2rem;
-    color: var(--text-color-2);
-    padding:10px;
-    font-family: var(--font-content);
-}
+
 
 .header_get_started{
     width: 100%;
@@ -61,14 +65,23 @@
 
 .typeWriterContainer{
     margin-top: 20px;
-    max-width: 400px;
+    /* max-width: 400px; */
+    display: flex;
+    justify-content: flex-start;
+    justify-self: left;
 }
 
 .typeWriterText{
     color:white;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color:var(--primary-color)
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 200;
+    color:var(--footer-text-p);
+    text-align:center;
+    display:flex;
+    justify-content: flex-start;
+    padding:10px 0;
+    font-family: var(--font-content);
 }
 
 
@@ -92,48 +105,30 @@
     margin:0 10px;
 }
 
-.metric_container{
-    position:absolute;
-    bottom: calc(-100%/8);
-    margin:0 auto
-}
-
-.metric_wrapper{
-    margin: 0 10%;
-    background-color: #455571;
-    border-radius:8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding:20px 40px;
-}
-
-.metric_wrapper h3{
-    color:var(--primary-color);
-    font-family:var(--font-title);
-    font-weight: 600;
-    font-size: 1.4rem;
-    padding:10px 0;
-}
-
-.metric_wrapper p{
-    color:var(--background-color);
-    font-weight: 200;
-}
 
 @media(min-width:600px){
     .header_wrapper{
+        display: grid;
         margin:10% 5%;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
     }
-    .metric_wrapper{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding:20px 40px;
-        margin: 0 10%;
+
+    .header_wrapper .banner_left{
+        justify-content: flex-start;
+        margin-top:0px;
     }
     
+    .header_wrapper .banner_left h1{
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .header_wrapper .banner_left p{
+        text-align: left;
+        width: 100%;
+        font-size: 1.2rem;
+    }
 }
 @media(min-width:900px){
     .header_wrapper h1{
@@ -142,7 +137,7 @@
     line-height: 4rem;
     /* color:var(--text-color-2); */
     max-width:600px;
-    margin:0 40px;
+    /* margin:0 40px; */
     }
     .typeWriterText{
         font-size: 1.2rem;

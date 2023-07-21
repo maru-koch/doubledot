@@ -1,0 +1,29 @@
+.metric_container{
+    position:absolute;
+    bottom: calc(-100%/8);
+    margin:0 auto
+}
+
+.metric_wrapper{
+    margin: 0 10%;
+    background-color: #455571;
+    border-radius:8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px 40px;
+}
+
+.metric_wrapper h3{
+    color:var(--primary-color);
+    font-family:var(--font-title);
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding:10px 0;
+}
+
+.metric_wrapper p{
+    color:var(--background-color);
+    font-weight: 200;
+}

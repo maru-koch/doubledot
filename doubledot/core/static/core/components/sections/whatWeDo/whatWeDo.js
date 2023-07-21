@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import './service.css'
-import { services } from '../../constants/services'
-import { Section } from './sub/section'
+import './whatWeDo.css'
+import { services } from '../../../constants/services'
+import { Section } from '../sub/section'
 
 const Card=({icon, title, description})=>{
     return (
@@ -38,7 +38,7 @@ const Card=({icon, title, description})=>{
     )
 }
 
-export const Services=()=>{
+export const WhatWeDo=()=>{
     const [serviceArr, setServices] = useState([])
 
     const Schedule=()=>{

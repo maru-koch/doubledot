@@ -22,7 +22,7 @@ export const MenuBar=({openMenu, setOpenMenu})=>{
                         <i className="fas fa-home"></i>
                         <p>Home</p>
                     </Link>
-                    <Link className="menu-item" to={'/'}>
+                    <Link className="menu-item" to={'/services'}>
                         <i className="fas fa-tools"></i>
                         <p>Services</p>
                     </Link>
