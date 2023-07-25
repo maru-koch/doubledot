@@ -5,7 +5,7 @@ import { Section } from "../sub"
 
 export const Technologies=()=>{
     return (
-        <Section bg='var(--panel-color)'>
+        <Section bg='var(--main-color)'>
         <section className="technology_container">
             <div className="tech-header">
                 <h2 className="title" style={{color:'var(--highlight-color)'}}>Technology Index</h2>

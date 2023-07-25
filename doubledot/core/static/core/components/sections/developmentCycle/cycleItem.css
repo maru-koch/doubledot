@@ -28,7 +28,7 @@
     border-radius: 50%;
     left:-3.9rem;
     z-index: 0;
-    background-color: #00cfb1/*var(--highlight-color)*/;
+    background-color: var(--primary-color);
 }
 
 .timelineItem__title{
@@ -59,7 +59,7 @@
         height: 20px;
         content: '';
         position:absolute;
-        background-color: #00cfb1/*var(--highlight-color)*/;
+        background-color:var(--primary-color);
         top: calc((100%/50 - 43px));
         border-radius: 50%;
         left: calc(100%/2 - 10px);

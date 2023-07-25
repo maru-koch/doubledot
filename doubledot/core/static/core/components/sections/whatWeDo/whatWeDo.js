@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './whatWeDo.css'
 import { services } from '../../../constants/services'
 import { Section } from '../sub/section'
+import { Modal, ScheduleConsultation } from '../../modal'
 
 const Card=({icon, title, description})=>{
     return (
@@ -38,12 +39,11 @@ const Card=({icon, title, description})=>{
     )
 }
 
-export const WhatWeDo=()=>{
+export const WhatWeDo=({setIsOpen})=>{
+    
+    // Sets the services when page is loaded
+
     const [serviceArr, setServices] = useState([])
-
-    const Schedule=()=>{
-
-    }
 
     useEffect(()=>{
         setServices(services)
@@ -68,7 +68,7 @@ export const WhatWeDo=()=>{
                     )}
                 </div>
                 <div className='service-action btn-holder'>
-                    <button className='btn'>Schedule Consultation</button>
+                    <button className='btn' onClick={()=>setIsOpen(true)}>Schedule Consultation</button>
                 </div>
             </div>
         </Section>

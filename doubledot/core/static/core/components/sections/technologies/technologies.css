@@ -25,13 +25,13 @@
 
 
 .tech-stacks tr td h3{
-    color: var(--primary-color);
+    color: #2b6fdf;
     padding: 10px 0;
     font-size: 1.4rem;
 }
 
 .tech-stacks tr td h4{
-    color: var(--footer-text-color);
+    color: var(--footer-text-p);
     font-weight: 400;
     padding: 10px 0;
 }
@@ -76,6 +76,9 @@
 }
 
 @media(min-width:900px){
+    .tech-header .description{
+        color: var(--footer-text-p)
+    }
     .tech-stacks .tech-icon{
         display: flex;
         justify-content: center;
@@ -84,6 +87,6 @@
 
     .tech-stacks .tech-icon i{
         transform: scale(2);
-        color:var(--primary-color)
+        color:var(--footer-text-p)
     }
 }

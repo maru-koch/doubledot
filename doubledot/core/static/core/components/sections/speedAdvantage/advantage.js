@@ -11,7 +11,7 @@ const AdvantageCard=({title, content, icon})=>{
     return (
         <section className={classes.advantage_cardContainer}>
             <div className={classes.advatage_cardWrapper} onClick={()=>setOpen(!open)} ref={titlebar}>
-                <i className={`fas ${open? `fa-chevron-down`:`fa-chevron-right`}`}></i>
+                <i className={`fas ${open? `fa-chevron-down`:`fa-chevron-right`}`} style={{color:'#ea7822'}}></i>
                 <h3>{title}</h3>
                 <div><img src={icon}/></div>
                 
@@ -38,7 +38,7 @@ export const SpeedAdvantage=()=>{
                             In 2023, speed and flexibility matters more than ever.
                             <br/>
                             <br/>
-                            At Brainhub, our goal is to get you the <strong>best team of engineers in the shortest time</strong> so we can all focus on getting the job done.
+                            At Doubledot Technologies, our goal is to get you the <strong>best team of engineers in the shortest time</strong> so we can all focus on getting the job done.
                             <br/>
                             <br/>
                             But we don't stop there – for every project, we rigorously follow and regularly review three lean software development principles to make sure we deliver value fast and continuously.‍
