@@ -88,17 +88,19 @@
 .header_get_started button{
     outline:none;
     border: 0;
-    border-bottom: 2px solid var(--primary-color);
-    padding: 20px 40px;
+    border: 2px solid var(--primary-color);
+    padding: 10px 20px;
     /* background-color: greenyellow; */
     background-color: transparent;
     font-size: 1.2rem;
     text-align: left;
-    color:var(--footer-text-p)
+    color:var(--footer-text-p);
+    cursor: pointer;
 }
 
 .header_get_started button:hover{
-    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--primary-color);;
+    color:white;
 }
 
 .header_get_started button span{
@@ -129,6 +131,9 @@
         width: 100%;
         font-size: 1.2rem;
     }
+    .header_get_started button{
+        padding: 20px 30px;
+    }
 }
 @media(min-width:900px){
     .header_wrapper h1{
@@ -142,6 +147,9 @@
     .typeWriterText{
         font-size: 1.2rem;
         max-width: 600px;
+    }
+    .header_get_started button{
+        padding: 20px 30px;
     }
 
 }

@@ -2,9 +2,12 @@ import React from 'react';
 import { Section} from '../sub';
 import classes from './whyChooseUs.module.css';
 import { Reasons } from './reasons';
-
+import { Link } from 'react-router-dom';
 
 export const WhyChooseUs =()=>{ 
+    const goContact=()=>{
+        Navigate('/contact')
+    }
     return (
     
         <Section title = "" subtitle = "">
@@ -24,10 +27,10 @@ export const WhyChooseUs =()=>{
                         </p>
                     </div>
                     <div className ="btn-holder">
-                        <button className='btn' onClick={()=>{}}>
+                        <button className='btn'>
                             {/* <span className='btn-icon-holder'><span className='btn-dot'></span><i className='fas fa-arrow-right'></i></span> */}
-                            Get In Touch
-                            </button>
+                            <Link className='link' to={'/contact'}>Get In Touch</Link>
+                        </button>
                     </div>
                 </div>
             </div>

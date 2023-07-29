@@ -59,13 +59,13 @@ export const IdeaForm=({handleSubmit})=>{
 
                     </div>
                     
-                    <div className="form-input-wrapper textarea" id="message">
+                    <div className="form-input-textarea" id="message">
                         <label className="form-label" htmlFor="message">Message</label>
                         <textarea className="form-textarea" rows="5" name="message" placeholder="Enter your Message" onChange={onChangeHandler}>
                         </textarea>
                     </div>
 
-                    <div className="form-input-wrapper confirmation">
+                    <div className="form-input-confirmation">
                         <div className="form-check">
                             <input type='checkbox' name="on_disclosurable_agreement" onChange={onChangeHandler}/>
                             <p>Please send me a Non-Disclosurable agreement for a confidential Consultation</p>

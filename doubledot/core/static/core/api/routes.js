@@ -75,3 +75,9 @@ export const schedule_=(event)=>{
     }
    
   }
+
+  export const get_articles=()=>{
+    // fetches all blog articles
+    const res = client.get('blog')
+    return res
+  }

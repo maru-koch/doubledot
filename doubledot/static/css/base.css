@@ -93,11 +93,8 @@ body p{
 }
 
 .link{
-    color:var(--footer-text-p);
+    color:white;
     text-decoration: none;
 }
 
-.link:active, .link:hover{
-    color:var(--footer-text-color)
-}
 

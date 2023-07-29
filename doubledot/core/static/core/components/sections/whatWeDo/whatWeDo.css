@@ -40,7 +40,7 @@
     /* background-image: url(../../../../../static/images/service_card_bg_.png); */
     background-color: var(--primary-color);
     transform: translateY(230px);
-    z-index: 1000;
+    z-index: 1;
     transition: .3s ease-in;
     height: 100%;
 }

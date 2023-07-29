@@ -1,0 +1,28 @@
+.booked_container{
+    max-width: 400px;
+    padding:20px;
+    margin:10px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    margin-top: 10%;
+    height: max-content;
+}
+
+.booked_wrapper .booked_title, .booked_wrapper .booked_subTitle{
+    width:100%;
+    text-align: center;
+    padding:5px 0;
+    font-family: var(--font-title);
+}
+
+.booked_subTitle{
+    font-weight: 400;
+
+}
+
+.booked_wrapper .booked_content{
+    text-align: left;
+    width: 100%;
+    margin-top:10px;
+    font-family: var(--font-content);
+}

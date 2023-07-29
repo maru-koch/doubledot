@@ -8,8 +8,8 @@ export const CompanyInfo=()=>{
             <h2 className={classes.footer_title}>Company</h2>
             <ul>
                 <li><Link className='link' to={'/about'}>About Doubledot</Link></li>
-                <li><Link className='link' to={'/about'}>Top Stories</Link></li>
-                <li><Link className='link' to={'/about'}>Career</Link></li>
+                <li><Link className='link' to={'/blog'}>Top Stories</Link></li>
+                <li><Link className='link' to={'/blog'}>Career</Link></li>
                 <li><Link className='link' to={'/contact'}>Get In Touch</Link></li>
             </ul>
         </div>

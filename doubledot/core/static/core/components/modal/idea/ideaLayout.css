@@ -3,8 +3,11 @@
     border-radius: 8px;
     box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
     padding: 20px;
-    height: max-content;
+    /* height: calc(max-content+20px); */
+    height: min-content;
+    max-height: 90vh;
     margin-top: 2rem;
+    overflow-y:scroll;
 }
 
 .layout-img{
@@ -62,3 +65,4 @@
 .layout-header-bottom{
     margin-top:20px;
 }
+

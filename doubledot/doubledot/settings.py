@@ -32,7 +32,9 @@ ALLOWED_HOSTS = []
 # Application definition
 CUSTOM_APP=[
     'core',
+    'core.blog',
     'corsheaders',
+    
     # 'django_browser_reload'
 ]
 
@@ -85,7 +87,7 @@ WSGI_APPLICATION = 'doubledot.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': config('DB_ENGINE'),
+        'ENGINE':config('DB_ENGINE'),
         'USER': config('DB_USER'),
         'NAME': config('DB_NAME'),
         'PASSWORD': config('DB_PASSWORD'),
@@ -130,10 +132,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'core/static')
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -3,6 +3,7 @@ import {CycleItem} from './cycleItem';
 import classes from './developmentCycle.module.css'
 import { devCycleData } from '../../../constants/developmentCycleData';
 import { Section } from '../sub/section';
+import { Link } from 'react-router-dom';
 
 
 export const DevelopmentCycle =({timeLineData})=>{
@@ -28,7 +29,7 @@ export const DevelopmentCycle =({timeLineData})=>{
                                     in design and development.
                                 </p>
                                 <div className='btn-holder'>
-                                    <button className='btn'>Let's talk</button>
+                                    <button className='btn'><Link to={'/contact'} className='link'>Let's talk</Link></button>
                                 </div>
                             </div>
                         </div>

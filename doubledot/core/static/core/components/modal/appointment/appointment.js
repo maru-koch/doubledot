@@ -5,7 +5,8 @@ import classes from './appointment.module.css'
 import { useState, useEffect } from 'react';
 import './schedule.css'
 
-import { gapi_env } from '../../../constants/gapi_config';
+import { BookedAppointment } from './booked';
+
 import { scheduleEvent } from '../../../api';
 
 let event = {
@@ -22,7 +23,7 @@ let event = {
   },
   recurrence: [],
   attendees: [
-    { email: 'nwokochafranklyn@gmail.com'}, 
+    // { email: 'nwokochafranklyn@gmail.com'}, 
     // { email: 'nwokocha.maruche@gmail.com'}
   ],
 
@@ -40,7 +41,7 @@ let event = {
 };
 
 
-export const ScheduleConsultation =()=>{
+export const ScheduleConsultation =({setBooked, setIsOpen})=>{
   // this generates basic available timeslots for the next 6 days
 
   const [event_, setEvent] = useState({});
@@ -75,11 +76,12 @@ export const ScheduleConsultation =()=>{
       setShowAppointment(true)
   }
 
-  const handleSubmit=(e)=>{
-    e.preventDefault()
+  const handleSubmit=()=>{
+    // e.preventDefault()
+
     // adds user's email to the array of attendees
-    console.log(email)
     if (email){
+      event_.attendees.push({ email: 'nwokochafranklyn@gmail.com'})
       event_.attendees.push(email)
     }
     
@@ -87,14 +89,17 @@ export const ScheduleConsultation =()=>{
     event_.end['dateTime']= `${date}T${time}`
 
     setEvent({...event_, [event_.attendees]:event_.attendees,  [event_.start['dateTime']] :`${date}T${time}`, [event_.end['dateTime']]:`${date}T${time}`})
+    
     // schedules the event
-    console.log(event_)
+ 
     let res = scheduleEvent(event_)
 
       if (res.status===200){
-        console.log("code:",res.status)
         sendEmail(res.data)
       }
+
+    // appointment has been booked by the user
+    setBooked(true)
   }
 
   const sendEmail=(data)=>{
@@ -108,6 +113,7 @@ export const ScheduleConsultation =()=>{
 
     }
   }
+  
   // Sets available days. # number of days from the current date
   const availableTimeslots = [0, 1, 2, 3, 4, 5].map((id) => {
     return {
@@ -126,9 +132,9 @@ export const ScheduleConsultation =()=>{
   return (
     <div className={classes.appointment_container}>
         <div className={classes.appointment_wrapper}>
-          <form className={classes.appointment_header} onSubmit={handleSubmit}>
+          <div className={classes.appointment_header}>
               <div className={classes.appointment_header_email}>
-                  <input name='email' defaultValue={'nwokocha.maruche@gmail.com'} type='email' placeholder='Please Enter your email address' onChange={(e)=>handleEmailChange(e)}/>
+                  <input name='email' required type='email' placeholder='Please Enter your email address' onChange={(e)=>handleEmailChange(e)}/>
               </div>
               <div className={classes.appointment_confirm}>
                 {show? 
@@ -144,13 +150,13 @@ export const ScheduleConsultation =()=>{
                         </div>
                       </div>
                   </div>
-                  <button type='submit'>Confirm Appointment</button>
+                  <button onClick={()=>handleSubmit()}>Confirm Appointment</button>
                 </div>
                 :
                 null}
-                <button className={classes.appointment_close_btn}><i className='fas fa-close'></i></button>
+                <button onClick={()=>setIsOpen(false)} className={classes.appointment_close_btn}><i className='fas fa-close'></i></button>
               </div>
-          </form>
+          </div>
           <div>
             <ScheduleMeeting
                 borderRadius={10}

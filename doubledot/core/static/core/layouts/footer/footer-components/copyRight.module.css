@@ -43,6 +43,16 @@
     cursor: pointer;
 }
 
+.copyright_link{
+    text-decoration: none;
+    color:white;
+}
+
+.copyright_link:hover{
+    color:var(--background-color);
+}
+
+
 @media(min-width:900px){
     .copyright_container{
         border-top: 1px solid var(--footer-text-color)

@@ -2,7 +2,7 @@ import React from "react"
 import classes from './banner.module.css'
 import Typewriter from "typewriter-effect";
 
-export const Banner=()=>{
+export const Banner=({setIsOpen})=>{
     return (
         <section className={classes.header_container}>
             <div className={classes.header_wrapper}>
@@ -44,7 +44,7 @@ export const Banner=()=>{
                     /> */}
                     </div>
                     <div className={classes.header_get_started}>
-                        <button>Get Started<span><i className="fas fa-arrow-right"></i></span></button>
+                        <button onClick={()=>setIsOpen(true)}>Schedule Consultation<span><i className="fas fa-arrow-right"></i></span></button>
                     </div>
                 </div> 
                 <div className={classes.banner_right}>

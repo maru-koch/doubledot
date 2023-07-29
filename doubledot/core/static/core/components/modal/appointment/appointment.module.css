@@ -8,12 +8,16 @@
 }
 
 .appointment_wrapper{
-    /* margin:2%; */
+    margin:auto;
     background-color: var(--background-color);
     /* padding:20px; */
     border-radius: 8px;
     /* height: 600px; */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .appointment_close_btn{
@@ -49,13 +53,6 @@
 }
 
 
-.appointment_header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .appointment_header h3{
     color: var(--main-color);
     font-size: 1.2rem;
@@ -69,6 +66,7 @@
     display: grid;
     place-items: center;
     padding: 5px;
+    margin:5px;
 }
 
 .appointment_header_email{
@@ -92,7 +90,9 @@
     display: grid;
     width: 100%;
 }
-
+.appointment_confirm_appointment{
+    margin: 10px;
+}
 .appointment_confirm_appointment h5{
     padding:1px 0;
     border-bottom: 1px solid lightgray;
@@ -118,32 +118,48 @@
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    padding:10px;
+    margin:10px;
 }
 
 .appointment_confirm_datetime button:hover{
     background-color: var(--primary-color);
     opacity: 0.8;
 }
+
 @media(min-width:900px){
     .appointment_header h3{
         padding:20px;
         font-size: 1.4rem;
         font-weight: 600;
     }
+
     .appointment_header{
         grid-template-columns: repeat(2, 1fr);
     }
+
     .appointment_wrapper{
         margin:10px 10%;
         /* padding:20px; */
     }
+
     .appointment_confirm_datetime{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .appointment_confirm_appointment{
+        margin: 0px;
     }
     .appointment_confirm_appointment div{
         width: 100%;
     }
+
     .appointment_confirm{
         grid-template-columns: 9fr 1fr;
     }
+    .appointment_confirm_datetime button{
+        padding:20px 10px;
+    }
+    
 }

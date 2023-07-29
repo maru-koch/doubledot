@@ -93,7 +93,8 @@
     padding: 20px;
     justify-content: flex-start;
     align-items: center;
-    color:var(--footer-text-color)
+    color:var(--footer-text-color);
+    text-decoration: none;
 }
 
 .menu-item:hover{

@@ -14,7 +14,7 @@
     /* height: max-content; */
     display: grid;
     place-content: center;
-    overflow-y: hidden;
+    overflow: hidden;
     
 }
 .contact_form_input_wrapper{
