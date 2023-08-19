@@ -4,7 +4,6 @@ from django.urls import reverse
 import uuid
 # Create your models here.
 
-
 class Handle(models.Model):
     name = models.CharField(max_length=255)
     icon = models.CharField(max_length=200)
@@ -17,7 +16,7 @@ class Author(models.Model):
     profile=models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='author')
     role = models.CharField(max_length=255)
-    social_media_handles = models.ManyToManyField(Handle)
+    social_media_handles = models.ForeignKey(Handle, on_delete=models.CASCADE, null=True, blank=True)
     is_author = models.BooleanField(default=True)
 
     def __str__(self) -> str:
@@ -46,11 +45,10 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_at']
 
-    # def get_absolute_url(self):
-    #     return reverse("post-detail", kwargs={"slug": self.slug})
-    
+    def get_absolute_url(self):
+        return reverse("post-detail", kwargs={"slug": self.slug})
 
-    # def __str__(self) -> str:
-    #     return self.title
+    def __str__(self) -> str:
+        return self.title
 
     
