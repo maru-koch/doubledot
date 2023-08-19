@@ -24,9 +24,22 @@ const client = axios.create({
 
 export const endpoints={
     sendEmail: async (formData)=>{
+      // sends enquiries
         const res = await client.post('enquiries', formData)
         return res
+    },
+    getAllArticles: ()=>{
+      // fetches all blog articles
+      const res = client.get('articles')
+      return res
+    },
+
+    getArticle:(slug)=>{
+      // fetches a single article
+      const res = client.get(`articles/${slug}`)
+      return res
     }
+
 }
 
 
@@ -76,8 +89,3 @@ export const schedule_=(event)=>{
    
   }
 
-  export const get_articles=()=>{
-    // fetches all blog articles
-    const res = client.get('blog')
-    return res
-  }

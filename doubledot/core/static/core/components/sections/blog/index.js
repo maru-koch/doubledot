@@ -1,2 +1,3 @@
 export * from './blog_layout'
-export * from './blog'
+export * from './articles'
+export * from './article_detail'

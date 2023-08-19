@@ -6,7 +6,7 @@ export const Header=({setOpenMenu, openIdea, openPhone})=>{
 
     const headerRef = useRef()
 
-    const changerHeaderColor=(e)=>{
+    const changeHeaderColor=(e)=>{
 
         // changes the background color of header when scroll position
         // greater than 200 on vertical axis
@@ -17,8 +17,8 @@ export const Header=({setOpenMenu, openIdea, openPhone})=>{
     }
 
     useEffect(()=>{
-        window.addEventListener('scroll', changerHeaderColor)
-        return ()=>window.addEventListener('scroll', changerHeaderColor)
+        window.addEventListener('scroll', changeHeaderColor)
+        return ()=>window.addEventListener('scroll', changeHeaderColor)
 
     }, [])
 

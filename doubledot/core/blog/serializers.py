@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from django.contrib.auth.models import User
-from core.blog.models import Post,Author, Category, SocialMedia, Handle
+from core.blog.models import Post,Author, Category,  Handle
 
 
 class CategorySerializer(ModelSerializer):
@@ -13,20 +13,15 @@ class UserSerializer(ModelSerializer):
         model=User
         fields = ('username', 'first_name', 'last_name', 'email', 'password')
 
-class SocialMediaSerializer(ModelSerializer):
-    class Meta:
-        model=SocialMedia
-        fields="__all__"
 
 class HandleSerializer(ModelSerializer):
-    social_media = SocialMediaSerializer()
     class Meta:
         model=Handle
-        fields = ('social_media', 'url')
+        fields = ('name', 'icon', 'url')
 
 class AuthorSerializer(ModelSerializer):
     profile = UserSerializer()
-    social_media_handles = HandleSerializer()
+    social_media_handles = HandleSerializer(many=True)
 
     class Meta:
         model = Author

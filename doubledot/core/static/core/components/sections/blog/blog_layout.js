@@ -1,8 +1,10 @@
 
 import React from "react";
 import classes from './blog_layout.module.css'
+import { Link } from "react-router-dom";
 
-export const BlogLayout=({children, author, articles})=>{
+export const BlogLayout=({children, author})=>{
+    console.log(author)
     return (
         <div className={classes.blog_container}>
             <div className={classes.blog_wrapper}>
@@ -12,30 +14,27 @@ export const BlogLayout=({children, author, articles})=>{
                 <aside className={classes.blog_sidebar}>
                     {/* AUTHOR */}
                     <div className={classes.blog_author}>
-                        <div>
-                            <div className={classes.author_img}>
-                                <img src={author.img} alt={author.first_name}/>
+                        <div className={classes.blog_author_detail}>
+                            <div className={classes.blog_author_img}>
+                                <img src={author?.image} alt={''}/>
                             </div>
                             <div className={classes.author_detail_container}>
-                                <p className={classes.author_title}>{author.title}</p>
+                                <p className={classes.author_title}>{author?.role}</p>
                                 <div className={classes.author_detail}>
-                                    <span>{author.first_name}</span>
-                                    <span>{author.last_name}</span>
+                                    <span>{author?.profile?.first_name || author?.profile?.username}</span>
+                                    <span>{author?.profile?.last_name}</span>
                                 </div>
                             </div>
                         </div>
                         <div className={classes.author_social}>
                             <p>Connect with Author</p>
                             <div className={classes.author_social_icons}>
-                                <div>
-                                    <i className="fa-brands fa-linkedin"></i>
-                                </div>
-                                <div>
-                                    <i className="fa-brands fa-twitter"></i>
-                                </div>
-                                <div>
-                                    <i className="fa-brands fa-facebook"></i>
-                                </div>
+                                {author?.social_media_handles?.map((media, id)=>{
+                                    <div key={id}>
+                                        <Link to={media?.url}><i className={`fa-brands fa-facebook`}></i></Link>
+                                    </div>
+                                } )}
+                        
                             </div>
                         </div>
                     </div>

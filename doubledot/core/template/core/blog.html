@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}<link rel="stylesheet" href="{% static './layout.css' %}">{% endblock %}
+{% block content %}
+    <div id="root"></div>
+    <div id="portal"></div>
+    {{post|json_script:'post' }}
+    <script src="{% static 'index-bundle.js' %}"></script>
+{% endblock%}

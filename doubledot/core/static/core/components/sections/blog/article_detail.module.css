@@ -1,0 +1,27 @@
+.article_img{
+    width:100%;
+    background-color: black;
+    display: grid;
+    place-content: center;
+}
+
+.article_img img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.article_title{
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.article_content p{
+    font-size: 1.2rem;
+    line-height: 20px;
+}
+
+.article_read{
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: monospace;
+}

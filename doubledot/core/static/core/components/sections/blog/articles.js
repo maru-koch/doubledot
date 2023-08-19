@@ -1,44 +1,58 @@
 import React from "react"
 import { useEffect, useState } from "react"
-import { articles } from "../../../constants/articles"
+// import { articles } from "../../../constants/articles"
 import { Layout } from "../../../layouts/layout"
+import classes from './articles.module.css'
 
-import classes from './blog.module.css'
-import { get_articles } from "../../../api"
+import { endpoints } from "../../../api"
+import { Link, useNavigate } from "react-router-dom"
 
 
 
 export const Article=({article})=>{
-    console.log(article)
+    
+    const navigate= useNavigate()
+
+    const goTo=(e)=>{
+        e.preventDefault()
+        navigate(`${article.slug}`)
+    }
+
     return (
         <section className={classes.article_container}>
             <div className={classes.article_img}>
-                <img src={article.img_url}/>
+                <img src={article.image}/>
             </div>
             <h2>{article.title}</h2>
             <div>
-                <p>{article.excerpts}</p>
+                <p>{article.slug}</p>
                 <p>10 mins read</p>
             </div>
             <div>
-                <button>Read More</button>
+                <button onClick={(e)=>goTo(e)}>
+                    Read More
+                </button>
             </div>
         </section>
     )
 }
 
 
-export const Blog=()=>{
+export const Articles=()=>{
 
-    const [articles_, setArticles] = useState([])
+    const [articles, setArticles] = useState([])
 
     useEffect(()=>{
         // fetches the blog articles on page load
-        
-        const res = get_articles()
-        const article = res.data
-        console.log(article)
-        setArticles(article)
+
+        const fetchArticles= async ()=>{
+           const res = await endpoints.getAllArticles()
+           console.log('ARTICLE:', res.data)
+           if (res.status===200){
+                setArticles(res.data)
+           }
+        }
+       fetchArticles()
     }, [])
     
     return (
@@ -53,7 +67,7 @@ export const Blog=()=>{
                 </div>
                 
                 <div className={classes.blog_articles}>
-                    {articles_.map(article=><Article article={article}/>)}
+                    {articles.map(article=><Article article={article}/>)}
                 </div>
             </main>
         </Layout>

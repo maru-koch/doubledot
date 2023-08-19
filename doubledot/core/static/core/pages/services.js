@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Layout } from "../layouts/layout"
-import { WhatWeDo, PageBanner } from "../components"
+import { WhatWeDo, PageBanner, Testimony} from "../components"
 import { Modal, ScheduleConsultation, BookedAppointment} from "../components/modal"
 
 export const Services=()=>{
@@ -12,7 +12,8 @@ export const Services=()=>{
         <Layout>
             <PageBanner page_title={'Our Services'}/>
             <WhatWeDo setIsOpen={setIsOpen}/>
-           <Modal open={isOpen}>
+            <Testimony/>
+            <Modal open={isOpen}>
                 {booked?<BookedAppointment setIsOpen={setIsOpen}/>: isOpen?<ScheduleConsultation setBooked={setBooked} setIsOpen={setIsOpen}/>:null}
             </Modal>
         </Layout>
