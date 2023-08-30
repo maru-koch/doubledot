@@ -64,6 +64,7 @@ export const WhatWeDo=({setIsOpen})=>{
                                 icon={service.icon} 
                                 title={service.title} 
                                 description={service.description}
+                                url={service.url}
                             />
                     )}
                 </div>

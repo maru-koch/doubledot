@@ -9,31 +9,36 @@ export const services =[
         id:2,
         icon:"fa-brands fa-uikit",
         title:"UI/UX",
-        description:"Top Notch UI/UX Design for great looking App with flawless funtionalities"
+        description:"Top Notch UI/UX Design for great looking App with flawless funtionalities",
+        url:'/mobile'
     },
     {
         id:3,
         icon:"fas fa-mobile",
         title:"Mobile App Development",
-        description:"Smart Mobile App to enhance User experience for your product or services"
+        description:"Smart Mobile App to enhance User experience for your product or services",
+        url:'/mobile'
     },
     {
         id:4,
         icon:"fas fa-computer",
         title:"IT Consultancy",
-        description:"Get Expert Insight into your project and Idea for Optimum performance and returns"
+        description:"Get Expert Insight into your project and Idea for Optimum performance and returns",
+        url:'/mobile'
     },
     {
         id:5,
         icon:"fas fa-code",
         title:"Web Development",
-        description:"Taylor-made web application to boost your brand awareness, and extend your reach"
+        description:"Taylor-made web application to boost your brand awareness, and extend your reach",
+        url:'/mobile'
     },
     {
         id:6,
         icon:"fas fa-wifi",
         title:"IoT",
-        description:"We develop smart products for home, Industries, utilities, estate and cities "
+        description:"We develop smart products for home, Industries, utilities, estate and cities",
+        url:'/mobile'
     }
     
 ]
