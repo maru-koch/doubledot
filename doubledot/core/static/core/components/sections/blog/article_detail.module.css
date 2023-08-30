@@ -1,12 +1,12 @@
 .article_img{
     width:100%;
-    background-color: black;
+    
     display: grid;
     place-content: center;
 }
 
 .article_img img{
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
 }
 
@@ -24,4 +24,11 @@
     font-size: .8rem;
     font-weight: 400;
     font-family: monospace;
+}
+
+@media(min-width:600px){
+    .article_img{
+        max-height: 364px;
+        border-radius: 20px;
+    }
 }

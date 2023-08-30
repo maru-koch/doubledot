@@ -12,7 +12,7 @@ export const BlogLayout=({children, author})=>{
                     {children}
                 </div>
                 <aside className={classes.blog_sidebar}>
-                    {/* AUTHOR */}
+                    {/* SIDE */}
                     <div className={classes.blog_author}>
                         <div className={classes.blog_author_detail}>
                             <div className={classes.blog_author_img}>

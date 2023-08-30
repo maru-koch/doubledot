@@ -33,7 +33,6 @@ export const ArticleDetail=()=>{
     return (
         <Layout>
             <BlogLayout author={article.author}>
-                
                 <article className={classes.article_container}>
                     <div className={classes.article_container}>
                         <h2  className={classes.article_title}>{article.title}</h2>

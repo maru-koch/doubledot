@@ -2,11 +2,11 @@ import React from "react"
 import { useEffect, useState } from "react"
 // import { articles } from "../../../constants/articles"
 import { Layout } from "../../../layouts/layout"
-import classes from './articles.module.css'
+
 
 import { endpoints } from "../../../api"
 import { Link, useNavigate } from "react-router-dom"
-
+import classes from './articles.module.css'
 
 
 export const Article=({article})=>{
@@ -23,12 +23,12 @@ export const Article=({article})=>{
             <div className={classes.article_img}>
                 <img src={article.image}/>
             </div>
-            <h2>{article.title}</h2>
-            <div>
+            <h2 className={classes.article_title}>{article.title}</h2>
+            <div className={classes.article_slug}>
                 <p>{article.slug}</p>
                 <p>10 mins read</p>
             </div>
-            <div>
+            <div className={classes.article_btn}>
                 <button onClick={(e)=>goTo(e)}>
                     Read More
                 </button>
@@ -58,6 +58,7 @@ export const Articles=()=>{
     return (
         <Layout>
             <main className={classes.blog_wrapper}>
+
                 <div className={classes.blog_header}>
                     <h3>{'Home > Top Stories'}</h3>
                     <div>
@@ -69,6 +70,7 @@ export const Articles=()=>{
                 <div className={classes.blog_articles}>
                     {articles.map(article=><Article article={article}/>)}
                 </div>
+                
             </main>
         </Layout>
     )

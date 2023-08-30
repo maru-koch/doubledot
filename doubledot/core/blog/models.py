@@ -31,7 +31,7 @@ class Category(models.Model):
 POST = ((0, 'draft'), (1, 'published'))
 
 class Post(models.Model):
-    id = models.UUIDField(default=uuid.uuid4(), primary_key=True, unique=True, editable=False)
+    id = models.UUIDField(default=uuid.uuid4, primary_key=True, unique=True, editable=False)
     title = models.CharField(max_length=200)
     slug = models.SlugField(default='', null=False, unique=True)
     image = models.ImageField(upload_to='post', default='/author/user_2.jpg')
