@@ -38,7 +38,7 @@ const Card=({icon, num, title, platform})=>{
     )
 }
 
-export const MobileAppPlatStacks=({setIsOpen})=>{
+export const MobileAppStacks=({setIsOpen})=>{
     
     // Sets the services when page is loaded
 

@@ -9,7 +9,7 @@ export const WhatWeDo=()=>{
             <ul>
                 <li><Link className="link">Custom Software development</Link></li>
                 <li><Link className="link">Mobile App Development</Link></li>
-                <li><Link className="link">UI/UX Design</Link></li>
+                <li><Link to={'/mobile'} className="link">UI/UX Design</Link></li>
                 <li style={{color:'#00cfb1'}}><Link className="link">Big Data & Analytics</Link></li>
                 <li><Link className="link">IoT Development</Link></li>
                 <li><Link className="link">IT Consultancy</Link></li>

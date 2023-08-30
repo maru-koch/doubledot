@@ -1,7 +1,7 @@
 import React from 'react'
 import {Router, Routes, Route} from 'react-router-dom'
 
-import { Home, AboutUs, Contact, Services} from "../core/static/core/pages";
+import { Home, AboutUs, Contact, Services, MobileAppDevelopment} from "../core/static/core/pages";
 import { ArticleDetail, Articles } from '../core/static/core/components';
 
 export const App=()=>{
@@ -13,6 +13,7 @@ export const App=()=>{
             <Route path='contact' element={<Contact/>}/>
             <Route path='articles' element={<Articles/>}/>
             <Route path='articles/:slug' element={<ArticleDetail/>}/>
+            <Route path='mobile' element={<MobileAppDevelopment/>}/>
         </Routes>
     )
 }
