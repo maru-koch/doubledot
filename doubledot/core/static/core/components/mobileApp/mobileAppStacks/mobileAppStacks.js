@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './whatWeDo.css'
+import './mobileAppStacks.module.css'
 import { mobile_stacks } from '../../../constants/mobileStacks'
 import { Section } from '../sub/section'
 
@@ -38,7 +38,7 @@ const Card=({icon, num, title, platform})=>{
     )
 }
 
-export const MobileAppPlatforms=({setIsOpen})=>{
+export const MobileAppPlatStacks=({setIsOpen})=>{
     
     // Sets the services when page is loaded
 

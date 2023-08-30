@@ -1,0 +1,55 @@
+.platform_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.platform_wrapper{
+    width: max-content;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.platform_inner{
+    position: relative;
+}
+
+.platform_allplatforms{
+    border: 2px solid rgb(185, 185, 241);
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+.platform_allplatforms:hover{
+    background-color: rgb(188, 221, 250);
+}
+
+.platform_android{
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+
+.platform_ios{
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+.platform_windows{
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
+.platform_crossplatform{
+    position: absolute;
+    left:0;
+    bottom:0;
+}
