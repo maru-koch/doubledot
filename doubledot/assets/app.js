@@ -13,7 +13,7 @@ export const App=()=>{
             <Route path='contact' element={<Contact/>}/>
             <Route path='articles' element={<Articles/>}/>
             <Route path='articles/:slug' element={<ArticleDetail/>}/>
-            <Route path='mobile' element={<MobileAppDevelopment/>}/>
+            <Route path='mobile' element={<Articles/>}/>
         </Routes>
     )
 }
